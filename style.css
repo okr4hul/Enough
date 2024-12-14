@@ -1,11 +1,11 @@
 .gallery{
-    width: 30%;
+    width: 50%;
     height: 300px;
     display: flex;
     gap: 5px;
 }
 .gallery img{
-    width: 10%;
+    width: 25%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
