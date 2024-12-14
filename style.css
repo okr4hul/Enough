@@ -11,7 +11,7 @@
     object-fit: cover;
     border-radius: 10px;
     border: 2px solid white;
-    transition: all ease 0.3s;
+    transition: all ease 0.7s;
     cursor: pointer;
 }
 
