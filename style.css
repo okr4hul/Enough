@@ -1,6 +1,6 @@
 .gallery{
     width: 30%;
-    height: 150px;
+    height: 100%;
     display: flex;
     gap: 5px;
 }
