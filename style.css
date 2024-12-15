@@ -1,3 +1,8 @@
+body {
+    background-color: grey;
+    opacity: 1.0;
+}
+
 .gallery{
     width: 50%;
     height: 300px;
@@ -17,7 +22,7 @@
     width: 100%;
 }
 
-body {
-    background-color: grey;
-    opacity: 1.0;
+p.one {
+    border-style: solid;
+    border-color: black;
 }
