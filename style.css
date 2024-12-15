@@ -18,5 +18,6 @@
 }
 
 body {
-  background-image: url("assets/bg.jpeg");
+    background-color: blue;
+    opacity: 0.3;
 }
