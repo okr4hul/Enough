@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A22.com</title>
+    <style>
+        /*  Basic CSS reset */
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        body {
+            font-family: sans-serif; /*  Replace with your chosen font */
+            background-color: #000; /*  Dark background */
+            color: #fff; /*  Light text */
+        }
+
+        /*  Basic container for sections */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /*  Basic header styling */
+        header {
+            background-color: rgba(0, 0, 0, 0.8); /*  Semi-transparent dark header */
+            padding: 10px 0;
+            position: fixed; /*  Keeps the header at the top on scroll */
+            width: 100%;
+            top: 0;
+            z-index: 1000; /* Ensure header is on top of other elements */
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        #hero {
+            background-color: #111;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        #hero h1 {
+            font-size: 3em;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        #hero p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        #hero .button {
+            display: inline-block;
+            background-color: #ffd700;
+            color: #000;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* Features Section */
+        #features {
+            padding: 50px 0;
+        }
+
+        #features .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        #features .feature {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+
+        #features .feature i {
+            font-size: 3em;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+                /* App Showcase Section */
+        #app-showcase {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        #app-showcase img {
+            max-width: 300px; /* Adjust as needed */
+            margin: 10px;
+            border: 2px solid #333;
+            border-radius: 5px;
+        }
+
+        /* Testimonials Section */
+        #testimonials {
+            padding: 50px 0;
+            background-color: #111;
+            text-align: center;
+        }
+
+        #testimonials .testimonial {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+
+        /* FAQ Section */
+        #faq {
+            padding: 50px 0;
+        }
+
+        #faq h3 {
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        #faq .answer {
+            display: none;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="#">A22.com</a>
+            <nav>
+                <!-- Add navigation links here if needed -->
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h1>Experience the Thrill of A22.com</h1>
+            <p>Your mobile platform for exciting games and secure transactions.</p>
+            <a href="#" class="button">Download the App</a>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2>Why Choose A22.com?</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <i class="fas fa-mobile-alt"></i> <!-- Replace with actual icon -->
+                    <h3>Mobile-First Design</h3>
+                    <p>Enjoy a seamless gaming experience designed specifically for your mobile device.</p>
+                </div>
+                <div class="feature">
+                                        <i class="fas fa-lock"></i> <!-- Replace with actual icon -->
+                    <h3>Secure and Reliable</h3>
+                    <p>Your security is our top priority. We utilize advanced encryption and secure payment gateways.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-chart-line"></i> <!-- Replace with actual icon -->
+                    <h3>Real-Time Data and Charts</h3>
+                    <p>Access comprehensive data, charts, and game history to make informed decisions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="app-showcase">
+        <div class="container">
+            <h2>Take a Closer Look</h2>
+            <img src="[Replace with URL to your first phone screenshot]" alt="App Screenshot 1">
+            <img src="[Replace with URL to your second phone screenshot]" alt="App Screenshot 2">
+            <img src="[Replace with URL to your third phone screenshot]" alt="App Screenshot 3">
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <div class="container">
+            <h2>What Our Players Are Saying</h2>
+            <div class="testimonial">
+                <p>"I love playing on A22.com! It's so easy to use and I've won some great prizes."</p>
+                <p>- John D.</p>
+            </div>
+            <div class="testimonial">
+                <p>"The security is top-notch. I feel confident that my in formation is safe."</p>
+                <p>- Jane S.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <h3 onclick="toggleAnswer(1)">Is A22.com secure?</h3>
+            <div class="answer" id="answer1">Yes, we use advanced encryption to protect your data.</div>
+
+            <h3 onclick="toggleAnswer(2)">How do I deposit funds?</h3>
+            <div class="answer" id="answer2">You can deposit funds using a variety of secure payment methods.</div>
+
+            <!-- Add more FAQs as needed -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 A22.com</p>
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Responsible Gaming</a>
+        </div>
+    </footer>
+
+    <script>
+        // Basic FAQ toggle function
+        function toggleAnswer(id) {
+            var answer = document.getElementById("answer" + id);
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
+        }
+    </script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</body>
+</html>
