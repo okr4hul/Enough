@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A22.com</title>
+    <title>A22.com - Experience the Thrill</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /*  Basic CSS reset */
+        /* CSS Reset */
         body, h1, h2, h3, p, ul, li {
             margin: 0;
             padding: 0;
@@ -13,26 +14,29 @@
         }
 
         body {
-            font-family: sans-serif; /*  Replace with your chosen font */
-            background-color: #000; /*  Dark background */
-            color: #fff; /*  Light text */
+            font-family: 'Roboto', sans-serif; /* More sophisticated font */
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
 
-        /*  Basic container for sections */
+        /* General Styling */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
 
-        /*  Basic header styling */
+        /* Header Styling */
         header {
-            background-color: rgba(0, 0, 0, 0.8); /*  Semi-transparent dark header */
-            padding: 10px 0;
-            position: fixed; /*  Keeps the header at the top on scroll */
+            background-color: rgba(0, 0, 0, 0.9); /* Darker, semi-transparent */
+            padding: 15px 0;
+            position: fixed;
             width: 100%;
             top: 0;
-            z-index: 1000; /* Ensure header is on top of other elements */
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
         }
 
         header .container {
@@ -45,74 +49,169 @@
             color: #ffd700;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1.2em;
+            transition: color 0.3s ease; /* Smooth color transition */
         }
 
-        /* Hero Section */
+        header a:hover {
+            color: #fff;
+        }
+
+        /* Hero Section Styling */
         #hero {
-            background-color: #111;
-            padding: 100px 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('[Replace with URL to background image]'); /* Gradient overlay */
+            background-size: cover;
+            background-position: center;
+            padding: 150px 0;
             text-align: center;
+            position: relative;
+            overflow: hidden; /* For animations */
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+                        z-index: 0; /* Ensure behind content */
+        }
+
+        #hero .container {
+            position: relative;
+            z-index: 1; /* Bring content to the front */
         }
 
         #hero h1 {
-            font-size: 3em;
+            font-size: 4em;
             color: #ffd700;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow */
+            animation: fadeInUp 1s ease-out; /* Fade-in animation */
         }
 
         #hero p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
+            font-size: 1.4em;
+            margin-bottom: 30px;
+            color: #eee;
+            animation: fadeInUp 1.2s ease-out;
         }
 
         #hero .button {
             display: inline-block;
             background-color: #ffd700;
             color: #000;
-            padding: 10px 20px;
+            padding: 15px 30px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Button shadow */
+            transition: background-color 0.3s ease;
+            animation: fadeInUp 1.4s ease-out;
         }
 
-        /* Features Section */
+        #hero .button:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        /* Features Section Styling */
         #features {
-            padding: 50px 0;
+            padding: 80px 0;
+            background-color: #111;
+        }
+
+        #features .container {
+            text-align: center; /* Center the heading */
+        }
+
+        #features h2 {
+            font-size: 2.5em;
+            color: #ffd700;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
 
         #features .feature-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 20px; /* Added margin */
         }
 
         #features .feature {
             text-align: center;
-            padding: 20px;
-            border: 1px solid #333;
-            border-radius: 5px;
+            padding: 30px;
+            background-color: #222;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+        }
+
+        #features .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
         }
 
         #features .feature i {
-            font-size: 3em;
+            font-size: 4em;
             color: #ffd700;
-            margin-bottom: 10px;
+                        margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
-                /* App Showcase Section */
+
+        #features .feature h3 {
+            font-size: 1.8em;
+            color: #eee;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        #features .feature p {
+            font-size: 1.1em;
+            color: #ccc;
+        }
+
+        /* App Showcase Section Styling */
         #app-showcase {
-            padding: 50px 0;
+            padding: 80px 0;
+            background-color: #000;
             text-align: center;
         }
 
-        #app-showcase img {
-            max-width: 300px; /* Adjust as needed */
-            margin: 10px;
-            border: 2px solid #333;
-            border-radius: 5px;
+        #app-showcase h2 {
+            font-size: 2.5em;
+            color: #ffd700;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
 
+        #app-showcase .image-gallery {
+            display: flex;
+            justify-content: center; /* Center the images */
+            align-items: center;
+            gap: 30px; /* Spacing between images */
+            overflow-x: auto; /* Allow horizontal scrolling */
+            padding-bottom: 20px; /* Add padding for scrollbar */
+        }
+
+        #app-showcase img {
+            max-width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        #app-showcase img:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
         /* Testimonials Section */
         #testimonials {
             padding: 50px 0;
+            0;
             background-color: #111;
             text-align: center;
         }
@@ -154,7 +253,17 @@
             text-decoration: none;
             margin: 0 10px;
         }
-        
+        /* Keyframe Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
@@ -181,17 +290,17 @@
             <h2>Why Choose A22.com?</h2>
             <div class="feature-grid">
                 <div class="feature">
-                    <i class="fas fa-mobile-alt"></i> <!-- Replace with actual icon -->
+                    <i class="fas fa-mobile-alt"></i>
                     <h3>Mobile-First Design</h3>
                     <p>Enjoy a seamless gaming experience designed specifically for your mobile device.</p>
                 </div>
                 <div class="feature">
-                                        <i class="fas fa-lock"></i> <!-- Replace with actual icon -->
+                    <i class="fas fa-lock"></i>
                     <h3>Secure and Reliable</h3>
                     <p>Your security is our top priority. We utilize advanced encryption and secure payment gateways.</p>
                 </div>
                 <div class="feature">
-                    <i class="fas fa-chart-line"></i> <!-- Replace with actual icon -->
+                    <i class="fas fa-chart-line"></i>
                     <h3>Real-Time Data and Charts</h3>
                     <p>Access comprehensive data, charts, and game history to make informed decisions.</p>
                 </div>
@@ -202,12 +311,13 @@
     <section id="app-showcase">
         <div class="container">
             <h2>Take a Closer Look</h2>
-            <img src="[Replace with URL to your first phone screenshot]" alt="App Screenshot 1">
-            <img src="[Replace with URL to your second phone screenshot]" alt="App Screenshot 2">
-            <img src="[Replace with URL to your third phone screenshot]" alt="App Screenshot 3">
+            <div class="image-gallery">
+                <img src="[Replace with URL to your first phone screenshot]" alt="App Screenshot 1">
+                <img src="[Replace with URL to your second phone screenshot]" alt="App Screenshot 2">
+                <img src="[Replace with URL to your third phone screenshot]" alt="App Screenshot 3">
+            </div>
         </div>
     </section>
-
     <section id="testimonials">
         <div class="container">
             <h2>What Our Players Are Saying</h2>
@@ -216,7 +326,7 @@
                 <p>- John D.</p>
             </div>
             <div class="testimonial">
-                <p>"The security is top-notch. I feel confident that my in formation is safe."</p>
+                <p>"The security is top-notch. I feel confident that my information is safe."</p>
                 <p>- Jane S.</p>
             </div>
         </div>
@@ -244,7 +354,6 @@
             <a href="#">Responsible Gaming</a>
         </div>
     </footer>
-
     <script>
         // Basic FAQ toggle function
         function toggleAnswer(id) {
@@ -256,7 +365,5 @@
             }
         }
     </script>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </body>
 </html>
